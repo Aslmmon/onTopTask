@@ -90,11 +90,6 @@ fun MasterScreen(
                                 onClickRetry = { retry() })
                         }
                     }
-
-                    loadState.source.refresh is LoadState.NotLoading->{
-                        item { EmptyView(stringResource(R.string.no_data_retrieved)) }
-
-                    }
                 }
             }
         }
