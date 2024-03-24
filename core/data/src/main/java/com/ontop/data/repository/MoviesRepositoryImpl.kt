@@ -9,7 +9,7 @@ import com.ontop.network.retrofit.RetrofitMoviesNetworkApi
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-const val MAX_PAGE_SIZE = 5
+const val MAX_PAGE_SIZE = 1
 
 class MoviesRepositoryImpl @Inject constructor(
     private val network: RetrofitMoviesNetworkApi,

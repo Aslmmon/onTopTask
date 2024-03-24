@@ -23,7 +23,7 @@ fun PageLoader(modifier: Modifier = Modifier) {
     ) {
         Text(
             text = stringResource(id = R.string.strFetchingDataFromServer),
-            color = MaterialTheme.colorScheme.primary,
+            color    = MaterialTheme.colorScheme.primary,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )

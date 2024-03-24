@@ -12,12 +12,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.ontop.moviesapp.R
 import com.ontop.moviesapp.ui.SharedViewModel
 import com.ontop.moviesapp.ui.shared.components.DebouncedBasicInput
+import com.ontop.moviesapp.ui.shared.components.EmptyView
 import com.ontop.moviesapp.ui.shared.components.ErrorMessage
 import com.ontop.moviesapp.ui.shared.components.LoadingNextPageItem
 import com.ontop.moviesapp.ui.shared.components.MovieItem
@@ -36,7 +39,7 @@ fun MasterScreen(
         viewModel.searchItems(viewModel.moviesState, searchQuery).collectAsLazyPagingItems()
 
     Column {
-        Box(modifier = modifier.fillMaxWidth()) {
+        Box(modifier = modifier.padding(5.dp)) {
             DebouncedBasicInput(
                 text = "",
                 onTextChanged = { newText ->
@@ -58,6 +61,7 @@ fun MasterScreen(
                 )
             }
             filteredItems.apply {
+
                 when {
                     loadState.refresh is LoadState.Loading -> {
                         item { PageLoader(modifier = Modifier.fillParentMaxSize()) }
@@ -85,6 +89,11 @@ fun MasterScreen(
                                 message = error.error.localizedMessage ?: "",
                                 onClickRetry = { retry() })
                         }
+                    }
+
+                    loadState.source.refresh is LoadState.NotLoading->{
+                        item { EmptyView(stringResource(R.string.no_data_retrieved)) }
+
                     }
                 }
             }
