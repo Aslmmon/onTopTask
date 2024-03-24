@@ -57,6 +57,5 @@ Clone and Run main branch  as it contains all latest work done && always merged 
 
 ## Link for an apk to test ? :thinking: 
 
-https://drive.google.com/file/d/157igRNdP0mtIqsavlpLsoQPJsEsuir87/view?usp=sharing
-
+https://drive.google.com/file/d/1AUqMoE-JdoGIzuFlVaWZXsNQ0kgRUea6/view?usp=sharing
 
