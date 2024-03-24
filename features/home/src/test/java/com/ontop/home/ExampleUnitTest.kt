@@ -1,4 +1,4 @@
-package com.ontop.startscreen
+package com.ontop.home
 
 import org.junit.Test
 

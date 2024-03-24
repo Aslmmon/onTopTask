@@ -5,7 +5,7 @@ plugins {
 
 
 android {
-    namespace = "com.ontop.startscreen"
+    namespace = "com.ontop.home"
     compileSdk = 34
     buildFeatures {
         compose = true

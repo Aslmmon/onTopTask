@@ -17,8 +17,8 @@ import com.ontop.moviesapp.ui.SharedViewModel
 import com.ontop.network.model.Movie
 import com.ontop.passwordgenerator.navigation.navigateToPasswordGeneratorScreen
 import com.ontop.passwordgenerator.navigation.passwordGeneratorScreen
-import com.ontop.startscreen.navigation.HOME_ROUTE
-import com.ontop.startscreen.navigation.home
+import com.ontop.home.navigation.HOME_ROUTE
+import com.ontop.home.navigation.home
 
 
 @Composable

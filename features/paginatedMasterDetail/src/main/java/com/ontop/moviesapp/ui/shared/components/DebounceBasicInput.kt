@@ -46,6 +46,7 @@ fun DebouncedBasicInput(
 
     BasicTextField(
         value = currentText,
+        singleLine = true,
         onValueChange = {
             currentText = it
             job?.cancel()

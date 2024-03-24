@@ -1,4 +1,4 @@
-package com.ontop.inputapp
+package com.ontop.inputapp.ui
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
@@ -13,6 +13,8 @@ import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -23,22 +25,25 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.ontop.inputapp.R
 
 
 @Composable
-fun InputScreen(modifier: Modifier = Modifier) {
-    UppercaseFirstLetterView(modifier)
-}
-
-
-@Composable
-fun UppercaseFirstLetterView(modifier: Modifier) {
-    var textToEnter by remember { mutableStateOf(TextFieldValue()) }
+fun InputScreen(
+    modifier: Modifier = Modifier,
+    upperCaseInputViewModel: UpperCaseInputViewModel = hiltViewModel()
+) {
+    val startText by upperCaseInputViewModel.startText.collectAsState()
+    val resultText by upperCaseInputViewModel.resultText.collectAsState()
 
     Column {
         BasicTextField(
-            value = textToEnter,
-            onValueChange = { textToEnter = it },
+            singleLine = true,
+            value = startText,
+            onValueChange = {
+                upperCaseInputViewModel.updateStartText(it)
+            },
             modifier = modifier.padding(16.dp),
             decorationBox = { innerTextField ->
                 Box(
@@ -56,7 +61,7 @@ fun UppercaseFirstLetterView(modifier: Modifier) {
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(Icons.Outlined.Edit, contentDescription = "")
-                        if (textToEnter.text.isEmpty()) {
+                        if (startText.isEmpty()) {
                             Text(text = stringResource(id = R.string.enter_text))
                         }
                         innerTextField.invoke()
@@ -64,28 +69,8 @@ fun UppercaseFirstLetterView(modifier: Modifier) {
                 }
             }
         )
-        ShowUpperCaseLetterView(text = textToEnter.text)
-    }
-}
 
-@Composable
-fun ShowUpperCaseLetterView(text: String) {
-    var isFirst = true
-    val resultText by remember(text) {
-        mutableStateOf(buildString {
-            for (char in text) {
-                if (isFirst && char.isLetter()) {
-                    append(char.uppercaseChar())
-                    isFirst = false
-                } else {
-                    append(char)
-                    if (char.isWhitespace()) {
-                        isFirst = true
-                    }
-                }
-            }
-        })
-    }
 
-    Text(text = resultText, modifier = Modifier.padding(16.dp))
+        Text(text = resultText, modifier = Modifier.padding(16.dp))
+    }
 }

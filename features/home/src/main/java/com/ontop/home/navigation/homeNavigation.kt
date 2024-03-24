@@ -1,8 +1,8 @@
-package com.ontop.startscreen.navigation
+package com.ontop.home.navigation
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
-import com.ontop.startscreen.ui.Home
+import com.ontop.home.ui.Home
 
 
 const val HOME_ROUTE = "home"

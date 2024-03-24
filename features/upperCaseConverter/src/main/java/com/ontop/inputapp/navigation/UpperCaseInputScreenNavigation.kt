@@ -4,7 +4,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.ontop.inputapp.InputScreen
+import com.ontop.inputapp.ui.InputScreen
 
 const val UPPER_CASE_CONVERTER_ROUTE = "upperCaseRoute"
 
