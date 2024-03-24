@@ -29,9 +29,9 @@ the following parameters:
 
 
 
-Pagination          |  UpperCaseConverted |  Password Generator
+Pagination          |  UpperCaseConverter |  Password Generator
 :-------------------------:|:-------------------------:|:-------------------------:
-![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3JlZHY3Z2g0Mjh6MGl4a2xtNTE0MnBhbDFyMjdzbGhvcXFhNDM1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP4ES13CNgsBTOfUOr/giphy.gif) |    ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3JlZHY3Z2g0Mjh6MGl4a2xtNTE0MnBhbDFyMjdzbGhvcXFhNDM1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP4ES13CNgsBTOfUOr/giphy.gif)   |     ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHZ0YWl3dWJ0ZmZ2M282ZnN1dnB1dTcwdzY1NG9zdXA4dTd2eGd2eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PluLbqp4OOYQBoTsdy/giphy.gif)
+![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3JlZHY3Z2g0Mjh6MGl4a2xtNTE0MnBhbDFyMjdzbGhvcXFhNDM1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP4ES13CNgsBTOfUOr/giphy.gif) |    ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTIxdHFnZjFyb2QzYzltc2N6dnV4aHd5NXhrcmZydmp2N29iMXR3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sITYvCNPJxdacde7Cw/giphy.gif)   |     ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHZ0YWl3dWJ0ZmZ2M282ZnN1dnB1dTcwdzY1NG9zdXA4dTd2eGd2eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PluLbqp4OOYQBoTsdy/giphy.gif)
 
 ## Technology used  && libraries ? :dizzy:
 - Jetpack Compose .
